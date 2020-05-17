@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "da914cc5-f83e-4c13-a02a-4a1d2ee6df72",
+		"name": "Reddit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Access Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "NubPQo5ecCv5l_40em6FS980OLw",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "x2EkourLxrrQQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "grant_type",
+						"value": "password",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "username",
+						"value": "kalyandechiraju",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "kxpka56uqR7a",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "user",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://www.reddit.com/api/v1/access_token?grant_type=password&username=kalyandechiraju&password=kxpka56uqR7a",
+					"protocol": "https",
+					"host": [
+						"www",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "kalyandechiraju"
+						},
+						{
+							"key": "password",
+							"value": "kxpka56uqR7a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "70254326-myeK0QDRGTFnhJSd8Q7aAs81sgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://oauth.reddit.com/api/v1/me",
+					"protocol": "https",
+					"host": [
+						"oauth",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "70254326-myeK0QDRGTFnhJSd8Q7aAs81sgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://oauth.reddit.com/r/fifa/new",
+					"protocol": "https",
+					"host": [
+						"oauth",
+						"reddit",
+						"com"
+					],
+					"path": [
+						"r",
+						"fifa",
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
